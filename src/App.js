@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
 // Conectar al backend mediante Socket.IO
-const socket = io("http://localhost:4000");
+const socket = io("https://pomodoroback-production.up.railway.app/");
 
 function App() {
   const [time, setTime] = useState(1500); // Tiempo restante en segundos
