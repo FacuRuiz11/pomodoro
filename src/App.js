@@ -102,6 +102,7 @@ function App() {
   };
 
   return (
+    <><title>"Pomodoro"</title>
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Pomodoro Timer</h1>
       <h2>{isBreak ? "Descanso" : "Trabajo"} - Ciclo {currentCycle} de {cycles}</h2>
@@ -122,8 +123,7 @@ function App() {
           value={workTime / 60}
           onChange={handleTimeChange(setWorkTime)}
           disabled={isRunning}
-          min="1"
-        />
+          min="1" />
         <br />
         <label htmlFor="breakTime">Tiempo de descanso (min):</label>
         <input
@@ -132,8 +132,7 @@ function App() {
           value={breakTime / 60}
           onChange={handleTimeChange(setBreakTime)}
           disabled={isRunning}
-          min="1"
-        />
+          min="1" />
         <br />
         <label htmlFor="cycles">Ciclos:</label>
         <input
@@ -142,10 +141,9 @@ function App() {
           value={cycles}
           onChange={handleCycleChange}
           disabled={isRunning}
-          min="1"
-        />
+          min="1" />
       </div>
-    </div>
+    </div></>
   );
 }
 
